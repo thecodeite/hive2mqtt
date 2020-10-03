@@ -45,7 +45,7 @@ async function run() {
     console.log('Could not get session ID')
     return
   }
-  const result = await getNodes(sessionId)
+  const result = await getNodes()
 
   let targetHeatTemperature = null
   let temperature = null
@@ -70,7 +70,7 @@ async function run() {
   console.log({ message })
 }
 
-async function getNodes(sessionId) {
+async function getNodes() {
   const url = 'https://api-prod.bgchprod.info/omnia/nodes'
   const options = {
     method: 'GET',
